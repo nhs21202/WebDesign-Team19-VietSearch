@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css" />
+    <title>Document</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo-wrap"><a href="../../index.html"> <div class="logo"><img src="./logo.png"></div></a></div>
+    
+    <input type="checkbox" id="check">   
+ <div class="login">
+    <div class="login-content">
+        <h4>
+            LOGIN
+        </h4>
+        <form id="login-form">
+            <div class="input-field">
+                <input type="email" id="login-email" placeholder="Enter your email" required>
+
+            </div>
+            <div class="input-field">
+                <input type="password" id="login-password" placeholder="Enter your password" required>
+            </div>
+            <p>Forgot password?</p>
+
+            <button class="login-button">Login</button>
+        </form>
+        <div class="signup-link">
+            <p>Don't have an account?</p> <button onclick="signUp()"><span>Sign up now</span></button>
+        </div>
+    </div>
+  </div>  
+
+  <div class="signup">
+    <div class="signup-content">
+        <h4>
+            SIGN UP
+        </h4>
+        <form id="signup-form">
+            <div class="input-field">
+                <input type="email" id="signup-email" placeholder="Enter your email" required>
+                
+            </div>
+            <div class="input-field">
+                <input type="password" id="signup-password" placeholder="Enter your password" required>
+            </div>
+            <button class="signup-button">Sign up</button>
+        </form>
+        <div class="login-link">
+            <p>Have account?</p> <button onclick="logIn()"><span>Log in now</span></button>
+        </div>
+    </div>
+  </div>
+  <script src="./signup.js"></script>
+  <script type="module" src="./firebase.js"> </script>
+</div>    
+</body>
+</html>

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="homepage.css" />
+  <link rel="icon" href="./Assets/logo.png" />
+
+  <title>VietSearch</title>
+</head>
+
+<body>
+  <div class="scrolltotop-container">
+    <button class="scrolltotop-button" id="scroll" onclick="scrollToTop()">
+      <svg viewBox="64 64 896 896" focusable="false" data-icon="vertical-align-top" width="1em" height="1em"
+        fill="currentColor" aria-hidden="true">
+        <path
+          d="M859.9 168H164.1c-4.5 0-8.1 3.6-8.1 8v60c0 4.4 3.6 8 8.1 8h695.8c4.5 0 8.1-3.6 8.1-8v-60c0-4.4-3.6-8-8.1-8zM518.3 355a8 8 0 00-12.6 0l-112 141.7a7.98 7.98 0 006.3 12.9h73.9V848c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V509.7H624c6.7 0 10.4-7.7 6.3-12.9L518.3 355z">
+        </path>
+      </svg>
+    </button>
+  </div>
+  <!--NAVIGATION BAR-->
+  <div class="header">
+    <div id="header-bgr">
+      <div class="navbar">
+
+        <div class="logo">
+          <a href="index.html"><img src="./Assets/logo-color.png" alt="logo" /></a>
+        </div>
+        <div class="nav-section">
+          <div class="nav-item-list">
+            <ul>
+              <li><a href="index.html"><span class="nav-item-text">Trang chủ</span></a></li>
+              <li><a href="fix-master/chuyengia.html"><span class="nav-item">Chuyên gia</span></a></li>
+              <li><a href="#"><span class="nav-item">Dịch vụ</span></a></li>
+              <li><a href="#"><span class="nav-item">Sự kiện</span></a></li>
+              <li><a href="#"><span class="nav-item">Tin tức</span></a></li>
+              <li><a href="#"><span class="nav-item">Bản đồ</span></a></li>
+              <li><a href="#"><span class="nav-item">Giới thiệu</span></a></li>
+              <li><a href="#"><span class="nav-item">Liên hệ</span></a></li>
+            </ul>
+          </div>
+          <div class="language">
+            <a href="" id="language">VI |</a>
+            <a href="" id="language">EN</a>
+          </div>
+          <div class="login-button">
+            <a href="./LoginSignUp-master/LoginSignUp-master/signup.html"><button><span>Đăng nhập</span></button></a>
+          </div>
+        </div>
+
+        
+        <div class="burger-menu-button burger-scrolled">
+          <button onclick="openMobileNav()"><span role="img" aria-label="menu" type="menu" tabindex="-1"
+              class="anticon anticon-menu Headerstyles__ToggleMenuStyled-sc-1ir3xg7-13 hnwZJG"><svg
+                viewBox="64 64 896 896" focusable="false" data-icon="menu" width="1em" height="1em" fill="currentColor"
+                aria-hidden="true">
+                <path
+                  d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z">
+                </path>
+              </svg></span></button>
+        </div>
+      
+      </div>
+
+
+      <!--TITLE-->
+      <div class="header-title">
+        <div id="title1">
+          <h1 class="title" id="line1">CHÀO MỪNG ĐẾN VỚI</h1>
+          <h1 class="title" id="line2">VIETSEARCH </h1>
+        </div>
+      </div>
+
+      <!--SEARCHING-->
+      <div class="search-section">
+        <div class="tabs">
+          <button class="tab-btn tab-link active2" onclick="openBox(event,'expert')"><svg aria-hidden="true"
+              focusable="false" data-prefix="fas" data-icon="user-tie" class="svg-inline--fa fa-user-tie fa-w-14 "
+              role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path fill="currentColor"
+                d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z">
+              </path>
+            </svg>
+            Chuyên gia</button>
+          <button class="tab-btn tab-link" onclick="openBox(event,'service')"><svg aria-hidden="true" focusable="false"
+              data-prefix="fas" data-icon="globe-asia" class="svg-inline--fa fa-globe-asia fa-w-16 " role="img"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+              <path fill="currentColor"
+                d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm-11.34 240.23c-2.89 4.82-8.1 7.77-13.72 7.77h-.31c-4.24 0-8.31 1.69-11.31 4.69l-5.66 5.66c-3.12 3.12-3.12 8.19 0 11.31l5.66 5.66c3 3 4.69 7.07 4.69 11.31V304c0 8.84-7.16 16-16 16h-6.11c-6.06 0-11.6-3.42-14.31-8.85l-22.62-45.23c-2.44-4.88-8.95-5.94-12.81-2.08l-19.47 19.46c-3 3-7.07 4.69-11.31 4.69H50.81C49.12 277.55 48 266.92 48 256c0-110.28 89.72-200 200-200 21.51 0 42.2 3.51 61.63 9.82l-50.16 38.53c-5.11 3.41-4.63 11.06.86 13.81l10.83 5.41c5.42 2.71 8.84 8.25 8.84 14.31V216c0 4.42-3.58 8-8 8h-3.06c-3.03 0-5.8-1.71-7.15-4.42-1.56-3.12-5.96-3.29-7.76-.3l-17.37 28.95zM408 358.43c0 4.24-1.69 8.31-4.69 11.31l-9.57 9.57c-3 3-7.07 4.69-11.31 4.69h-15.16c-4.24 0-8.31-1.69-11.31-4.69l-13.01-13.01a26.767 26.767 0 0 0-25.42-7.04l-21.27 5.32c-1.27.32-2.57.48-3.88.48h-10.34c-4.24 0-8.31-1.69-11.31-4.69l-11.91-11.91a8.008 8.008 0 0 1-2.34-5.66v-10.2c0-3.27 1.99-6.21 5.03-7.43l39.34-15.74c1.98-.79 3.86-1.82 5.59-3.05l23.71-16.89a7.978 7.978 0 0 1 4.64-1.48h12.09c3.23 0 6.15 1.94 7.39 4.93l5.35 12.85a4 4 0 0 0 3.69 2.46h3.8c1.78 0 3.35-1.18 3.84-2.88l4.2-14.47c.5-1.71 2.06-2.88 3.84-2.88h6.06c2.21 0 4 1.79 4 4v12.93c0 2.12.84 4.16 2.34 5.66l11.91 11.91c3 3 4.69 7.07 4.69 11.31v24.6z">
+              </path>
+            </svg>Dịch vụ</button>
+        </div>
+        <div class="searching-section">
+          <div class="searching-section-wrap">
+            <div class="tabcontent active" id="expert">
+
+              <div class="expert-searching searching">
+                <p>Tìm chuyên gia?</p>
+                <span class="searchbox-wrap">
+                  <svg viewBox="64 64 896 896" focusable="false" data-icon="user" width="1em" height="1em"
+                    fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M858.5 763.6a374 374 0 00-80.6-119.5 375.63 375.63 0 00-119.5-80.6c-.4-.2-.8-.3-1.2-.5C719.5 518 760 444.7 760 362c0-137-111-248-248-248S264 225 264 362c0 82.7 40.5 156 102.8 201.1-.4.2-.8.3-1.2.5-44.8 18.9-85 46-119.5 80.6a375.63 375.63 0 00-80.6 119.5A371.7 371.7 0 00136 901.8a8 8 0 008 8.2h60c4.4 0 7.9-3.5 8-7.8 2-77.2 33-149.5 87.8-204.3 56.7-56.7 132-87.9 212.2-87.9s155.5 31.2 212.2 87.9C779 752.7 810 825 812 902.2c.1 4.4 3.6 7.8 8 7.8h60a8 8 0 008-8.2c-1-47.8-10.9-94.3-29.5-138.2zM512 534c-45.9 0-89.1-17.9-121.6-50.4S340 407.9 340 362c0-45.9 17.9-89.1 50.4-121.6S466.1 190 512 190s89.1 17.9 121.6 50.4S684 316.1 684 362c0 45.9-17.9 89.1-50.4 121.6S557.9 534 512 534z">
+                    </path>
+                  </svg>
+                  <input type="text" placeholder=" Thử ''Trí tuệ nhân tạo'' ">
+                </span>
+              </div>
+
+              <div class="position-searching searching">
+                <p>Tìm ở đâu? </p>
+                <span class="searchbox-wrap">
+                  <svg viewBox="64 64 896 896" focusable="false" data-icon="pushpin" width="1em" height="1em"
+                    fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M878.3 392.1L631.9 145.7c-6.5-6.5-15-9.7-23.5-9.7s-17 3.2-23.5 9.7L423.8 306.9c-12.2-1.4-24.5-2-36.8-2-73.2 0-146.4 24.1-206.5 72.3a33.23 33.23 0 00-2.7 49.4l181.7 181.7-215.4 215.2a15.8 15.8 0 00-4.6 9.8l-3.4 37.2c-.9 9.4 6.6 17.4 15.9 17.4.5 0 1 0 1.5-.1l37.2-3.4c3.7-.3 7.2-2 9.8-4.6l215.4-215.4 181.7 181.7c6.5 6.5 15 9.7 23.5 9.7 9.7 0 19.3-4.2 25.9-12.4 56.3-70.3 79.7-158.3 70.2-243.4l161.1-161.1c12.9-12.8 12.9-33.8 0-46.8zM666.2 549.3l-24.5 24.5 3.8 34.4a259.92 259.92 0 01-30.4 153.9L262 408.8c12.9-7.1 26.3-13.1 40.3-17.9 27.2-9.4 55.7-14.1 84.7-14.1 9.6 0 19.3.5 28.9 1.6l34.4 3.8 24.5-24.5L608.5 224 800 415.5 666.2 549.3z">
+                    </path>
+                  </svg>
+                  <input type="text" placeholder="Thử  ''Quốc gia, thành phố hoặc zipcode'' ">
+                </span>
+              </div>
+
+              <div class="searching-button">
+                <button>
+                  <svg viewBox="64 64 896 896" focusable="false" data-icon="search" width="1em" height="1em"
+                    fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
+                    </path>
+                  </svg>
+                  <span>Tìm kiếm</span>
+                </button>
+
+              </div>
+
+            </div>
+
+            <div class="tabcontent active" id="service" style="display:none">
+
+              <div class="expert-searching searching">
+                <p>Tìm dịch vụ?</p>
+                <span class="searchbox-wrap">
+                  <svg viewBox="64 64 896 896" focusable="false" data-icon="home" width="1em" height="1em"
+                    fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 00-44.4 0L77.5 505a63.9 63.9 0 00-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0018.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z">
+                    </path>
+                  </svg>
+                  <input type="text" placeholder=" Thử  ''Nhà hàng'' ">
+                </span>
+              </div>
+
+              <div class="position-searching searching">
+                <p>Tìm ở đâu? </p>
+                <span class="searchbox-wrap">
+                  <svg viewBox="64 64 896 896" focusable="false" data-icon="pushpin" width="1em" height="1em"
+                    fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M878.3 392.1L631.9 145.7c-6.5-6.5-15-9.7-23.5-9.7s-17 3.2-23.5 9.7L423.8 306.9c-12.2-1.4-24.5-2-36.8-2-73.2 0-146.4 24.1-206.5 72.3a33.23 33.23 0 00-2.7 49.4l181.7 181.7-215.4 215.2a15.8 15.8 0 00-4.6 9.8l-3.4 37.2c-.9 9.4 6.6 17.4 15.9 17.4.5 0 1 0 1.5-.1l37.2-3.4c3.7-.3 7.2-2 9.8-4.6l215.4-215.4 181.7 181.7c6.5 6.5 15 9.7 23.5 9.7 9.7 0 19.3-4.2 25.9-12.4 56.3-70.3 79.7-158.3 70.2-243.4l161.1-161.1c12.9-12.8 12.9-33.8 0-46.8zM666.2 549.3l-24.5 24.5 3.8 34.4a259.92 259.92 0 01-30.4 153.9L262 408.8c12.9-7.1 26.3-13.1 40.3-17.9 27.2-9.4 55.7-14.1 84.7-14.1 9.6 0 19.3.5 28.9 1.6l34.4 3.8 24.5-24.5L608.5 224 800 415.5 666.2 549.3z">
+                    </path>
+                  </svg>
+
+                  <input type="text" placeholder="Thử  ''Quốc gia, thành phố hoặc zipcode'' ">
+                </span>
+              </div>
+
+              <div class="searching-button">
+                <button>
+                  <svg viewBox="64 64 896 896" focusable="false" data-icon="search" width="1em" height="1em"
+                    fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
+                    </path>
+                  </svg>
+                  <span>Tìm kiếm</span>
+                </button>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-nav-section">
+      <a href="javascript:void(0)" class="closenav-btn" onclick="closeMobileNav()"><svg class="svg-icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M810.65984 170.65984q18.3296 0 30.49472 12.16512t12.16512 30.49472q0 18.00192-12.32896 30.33088l-268.67712 268.32896 268.67712 268.32896q12.32896 12.32896 12.32896 30.33088 0 18.3296-12.16512 30.49472t-30.49472 12.16512q-18.00192 0-30.33088-12.32896l-268.32896-268.67712-268.32896 268.67712q-12.32896 12.32896-30.33088 12.32896-18.3296 0-30.49472-12.16512t-12.16512-30.49472q0-18.00192 12.32896-30.33088l268.67712-268.32896-268.67712-268.32896q-12.32896-12.32896-12.32896-30.33088 0-18.3296 12.16512-30.49472t30.49472-12.16512q18.00192 0 30.33088 12.32896l268.32896 268.67712 268.32896-268.67712q12.32896-12.32896 30.33088-12.32896z"  /></svg></a>
+
+    <div class="mobile-nav-item-list">
+      <img src="./Assets/logo-color.png">
+      <ul>
+        <li><a href="homepage.html"><span class="nav-item-text">Trang chủ</span></a></li>
+        <li><a href="./fix-master/chuyengia.html"><span class="mobile-nav-item-text">Chuyên gia</span></a></li>
+        <li><a href="#"><span class="mobile-nav-item-text">Dịch vụ</span></a></li>
+        <li><a href="#"><span class="mobile-nav-item-text">Sự kiện</span></a></li>
+        <li><a href="#"><span class="mobile-nav-item-text">Tin tức</span></a></li>
+        <li><a href="#"><span class="mobile-nav-item-text">Bản đồ</span></a></li>
+        <li><a href="#"><span class="mobile-nav-item-text">Giới thiệu</span></a></li>
+        <li><a href="#"><span class="mobile-nav-item-text">Liên hệ</span></a></li>
+      </ul>
+    </div>
+    <div class="mobile-language">
+      <a href="" id="language">VI |</a>
+      <a href="" id="language">EN</a>
+    </div>
+    <div class="mobile-login-button">
+      <a href="./LoginSignUp-master/LoginSignUp-master/signup.html"><button><span>Đăng nhập</span></button></a>
+    </div>
+  </div>
+
+  <!--BODY-->
+  <div class="body">
+    <div class="body-wrap">
+      <!--EXPERTS-->
+      <div class="expert-section">
+        <div class="body-section-wrap">
+          <div class="section-heading">
+            <h3>CHUYÊN GIA</h3>
+            <a href="#homepage"> Tạo Profile chuyên gia</a>
+          </div>
+          <div class="section-item-list">
+
+            <div class="expert-item">
+              <a href="#">
+                <img src="./Assets/expert/artificial_intelligence.jpg">
+              </a>
+              <a href="#">
+                <h4>Trí tuệ nhân tạo</h4>
+              </a>
+            </div>
+            <div class="expert-item">
+              <a href="#">
+                <img src="./Assets/expert/business_law.jpg">
+              </a>
+              <a href="#">
+                <h4>Luật kinh doanh</h4>
+              </a>
+            </div>
+            <div class="expert-item">
+              <a href="#">
+                <img src="./Assets/expert/civil_engineering.jpg">
+              </a>
+              <a href="#">
+                <h4>Công trình dân dụng</h4>
+              </a>
+            </div>
+            <div class="expert-item">
+              <a href="#">
+                <img src="./Assets/expert/finance.jpg">
+              </a>
+              <a href="#">
+                <h4>Tài chính</h4>
+              </a>
+            </div>
+            <div class="expert-item">
+              <a href="#">
+                <img src="./Assets/expert/international_economics.jpg">
+              </a>
+              <a href="#">
+                <h4>Kinh tế quốc tế</h4>
+              </a>
+            </div>
+            <div class="expert-item">
+              <a href="#">
+                <img src="./Assets/expert/mechanical_engineering.jpg">
+              </a>
+              <a href="#">
+                <h4>Kỹ sư cơ khí</h4>
+              </a>
+            </div>
+            <div class="expert-item">
+              <a href="#">
+                <img src="./Assets/expert/medicine_and_health.jpg">
+              </a>
+              <a href="#">
+                <h4>Y tế và Sức khỏe</h4>
+              </a>
+            </div>
+            <div class="expert-item">
+              <a href="#">
+                <img src="./Assets/expert/robotics.jpg">
+              </a>
+              <a href="#">
+                <h4>Tự động hóa và Người máy</h4>
+              </a>
+            </div>
+            <div class="expert-item addmore" style="background-color:rgb(223, 220, 220);">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-plus-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                <path
+                  d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                <p><em>CLICK ĐỂ THÊM DANH MỤC</em></p>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--SERVICES-->
+      <div class="service-section">
+        <div class="body-section-wrap">
+          <div class="section-heading">
+            <h3>DỊCH VỤ</h3>
+            <a href="#homepage"> Tạo Doanh nghiệp, dịch vụ</a>
+          </div>
+          <div class="section-item-list">
+
+            <div class="service-item">
+              <a href="#">
+                <img src="./Assets/service/architects.jpg">
+              </a>
+              <a href="#">
+                <h4>Kiến trúc sư</h4>
+              </a>
+            </div>
+            <div class="service-item">
+              <a href="#">
+                <img src="./Assets/service/attorneys.jpg">
+              </a>
+              <a href="#">
+                <h4>Luật sư</h4>
+              </a>
+            </div>
+            <div class="service-item">
+              <a href="#">
+                <img src="./Assets/service/beauty_salons.jpg">
+              </a>
+              <a href="#">
+                <h4>Thẩm mỹ viện</h4>
+              </a>
+            </div>
+            <div class="service-item">
+              <a href="#">
+                <img src="./Assets/service/dentist.jpg">
+              </a>
+              <a href="#">
+                <h4>Nha sĩ</h4>
+              </a>
+            </div>
+            <div class="service-item">
+              <a href="#">
+                <img src="./Assets/service/insurance.jpg">
+              </a>
+              <a href="#">
+                <h4>Bảo hiểm</h4>
+              </a>
+            </div>
+            <div class="service-item">
+              <a href="#">
+                <img src="./Assets/service/pharmacies.jpg">
+              </a>
+              <a href="#">
+                <h4>Nhà thuốc</h4>
+              </a>
+            </div>
+            <div class="service-item">
+              <a href="#">
+                <img src="./Assets/service/restaurant.jpg">
+              </a>
+              <a href="#">
+                <h4>Nhà hàng</h4>
+              </a>
+            </div>
+            <div class="expert-item addmore" style="background-color:rgb(223, 220, 220);">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-plus-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                <path
+                  d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                <p><em>CLICK ĐỂ THÊM DANH MỤC</em></p>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--EVENTS-->
+      <div class="event-section">
+        <div class="body-section-wrap">
+          <div class="section-heading">
+            <h3>SỰ KIỆN</h3>
+            <a href="#homepage"> Tạo sự kiện</a>
+
+          </div>
+          <div class="news-list">
+            <div class="big">
+
+              <div class="bignews" id="big1">
+
+                <img src="./Assets/events/big/e0a15119cd7ed7f7df4b90a29dc7b46.jpg.png ">
+                <div class="bignews-content">
+                  <h4>Series Webinar: Linknovate to the Next Power</h4>
+                  <div class="event-info">
+                    <img src="./Assets/calendar.svg">
+                    <span>14h15 05/12/2022 - 15h15 05/12/2022</span>
+                  </div>
+                  <div class="event-info">
+                    <img src="./Assets/location.svg">
+                    <span>Đại học Kinh tế Quốc dân, Hai Bà Trưng, Hà Nội </span>
+                  </div>
+                </div>
+              </div>
+              <div class="bignews" id="big2">
+
+                <img src="./Assets/events/big/bignews2.jpg ">
+                <div class="bignews-content">
+                  <h4>Ngày hội du học Úc - AUSSIE STUDY DAY</h4>
+                  <div class="event-info">
+                    <img src="./Assets/calendar.svg">
+                    <span>16h00 04/03/2023 - 18h00 07/03/2023</span>
+                  </div>
+                  <div class="event-info">
+                    <img src="./Assets/location.svg">
+                    <span>Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="small">
+          <div class="smallnews">
+            <img src="./Assets/events/small/small1.png">
+            <div class="smallnews-content">
+              <h4>Cất cánh 2022 - IT’S TIME TO SHINE</h4>
+              <div class="small-info">
+                <img src="./Assets/calendar.svg">
+                <span>16h00 04/03/2023 - 18h00 07/03/2023</span>
+              </div>
+              <div class="small-info">
+                <img src="./Assets/location.svg">
+                <span>Đại học Kinh tế Quốc dân, Hai Bà Trưng, Hà Nội </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="smallnews">
+            <img src="./Assets/events/small/small2.png">
+            <div class="smallnews-content">
+              <h4>Diễn đàn Trí thức Việt Nam tại Nhật Bản</h4>
+              <div class="small-info">
+                <img src="./Assets/calendar.svg">
+                <span>16h00 04/03/2023 - 18h00 07/03/2023</span>
+              </div>
+              <div class="small-info">
+                <img src="./Assets/location.svg">
+                <span>Đại học Kinh tế Quốc dân, Hai Bà Trưng, Hà Nội </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="smallnews">
+            <img src="./Assets/events/small/small3.png">
+            <div class="smallnews-content">
+              <h4>NGÀY HỘI DU HỌC PHÁP</h4>
+              <div class="small-info">
+                <img src="./Assets/calendar.svg">
+                <span>21h30 10/11/2023 - 17h00 11/12/2023</span>
+              </div>
+              <div class="small-info">
+                <img src="./Assets/location.svg">
+                <span>Đại học Kinh tế Quốc dân, Hai Bà Trưng, Hà Nội </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-events">
+
+          <div class="mobile-bignews" id="big1">
+
+            <img src="./Assets/events/big/e0a15119cd7ed7f7df4b90a29dc7b46.jpg.png ">
+            <div class="mobile-bignews-content">
+              <h4>Series Webinar: Linknovate to the Next Power</h4>
+              <div class="mobile-info">
+                <img src="./Assets/calendar.svg">
+                <span>14h15 05/12/2022 - 15h15 05/12/2022</span>
+              </div>
+              <div class="mobile-info">
+                <img src="./Assets/location.svg">
+                <span>Đại học Kinh tế Quốc dân, Hai Bà Trưng, Hà Nội </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mobile-bignews" id="big2">
+
+            <img src="./Assets/events/big/bignews2.jpg ">
+            <div class="mobile-bignews-content">
+              <h4>Ngày hội du học Úc - AUSSIE STUDY festival day</h4>
+              <div class="mobile-info">
+                <img src="./Assets/calendar.svg">
+                <span>16h00 04/03/2023 - 18h00 07/03/2023</span>
+              </div>
+              <div class="mobile-info">
+                <img src="./Assets/location.svg">
+                <span>Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mobile-bignews" id="big3">
+
+            <img src="./Assets/events/big/smallnews1.png ">
+            <div class="mobile-bignews-content">
+              <h4>Cất cánh 2022 - It's time to shine with Australia</h4>
+              <div class="mobile-info">
+                <img src="./Assets/calendar.svg">
+                <span>14h15 05/12/2022 - 15h15 05/12/2022</span>
+              </div>
+              <div class="mobile-info">
+                <img src="./Assets/location.svg">
+                <span>Đại học Kinh tế Quốc dân, Hai Bà Trưng, Hà Nội </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mobile-bignews" id="big4">
+
+            <img src="./Assets/events/small/small3.png">
+            <div class="mobile-bignews-content">
+              <h4>NGÀY HỘI DU HỌC PHÁP: FRENCH FESITVAL</h4>
+              <div class="mobile-info">
+                <img src="./Assets/calendar.svg">
+                <span>15h00 24/07/2022 - 17h00 04/08/2023 </span>
+              </div>
+              <div class="mobile-info">
+                <img src="./Assets/location.svg">
+                <span>Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+      <!--NEWS-->
+      <div class="news-section">
+        <div class="body-section-wrap">
+          <div class="section-heading">
+            <h3>TIN TỨC</h3>
+          </div>
+          <div class="news-container">
+
+            <div class="hot-news" style="cursor: pointer;">
+              <img src="./Assets/news/bignews_img.png">
+              <div class="news-content">
+                <h2>Bà Trương Thị Mai làm thường trực ban Bí thư</h2>
+                <div class="news-detail">
+                  <p><em>Trưởng ban tổ chức Trung ương Trương Thị Mai được Bộ Chính trị phân công giữ chức Thường trực
+                      Ban Bí thư thay ông Võ Văn Thưởng đã được bầu làm Chủ tịch nước Cộng hòa Xã hội Chủ nghĩa Việt
+                      Nam</em></p>
+                  <span class="time"><em>17:30 - 21/02/2023</em></span>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="right-news-wrap">
+
+              <div class="top-small-news" style="cursor: pointer;">
+                <img src="./Assets/news/topsmallnews_img.png">
+                <div class="small-news-content">
+                  <h2>Người Việt Nam tại Thổ Nhĩ Kì chung tay giúp đỡ nạn nhân động đất</h2>
+                  <div class="small-news-detail">
+                    <p><em>Cộng đồng người Việt tại Thổ Nhĩ Kì đã chung tay quyên góp nhu yếu phẩm</em></p>
+                    <span class="time"><em>17:30 - 21/02/2023</em></span>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="text-news-wrap">
+                <div class="text-news" style="cursor: pointer;">
+                  <h2>Sáu người Việt ở Thổ Nhĩ Kì bị ảnh hưởng bởi trận động đất</h2>
+                  <div class="text-news-detail">
+                    <p><em>Đại sứ quán Việt Nam cho biết có 6 người Việt bị ảnh hưởng bởi động đất</em></p>
+                    <span class="time"><em>17:30 - 21/02/2023</em></span>
+                  </div>
+                </div>
+                <div class="text-news" style="cursor: pointer;">
+                  <h2>Máy bay rơi tại Hải Phòng - Quảng Ninh, 5 người gặp nạn</h2>
+                  <div class="text-news-detail">
+                    <p><em>Lực lượng chức năng đang khẩn trương tìm kiếm nạn nhân trong vụ tai nạn </em></p>
+                    <span class="time"><em>17:30 - 21/02/2023</em></span>
+                  </div>
+                </div>
+                <div class="text-news" style="cursor: pointer;">
+                  <h2>Quy định của TP.HCM về miễn nhiệm đối với cán bộ</h2>
+                  <div class="text-news-detail">
+                    <p><em>Cán bộ bị kỷ luật, khiển trách không thể đảm nhiệm chức vụ </em></p>
+                    <span class="time"><em>17:30 - 21/02/2023</em></span>
+                  </div>
+                </div>
+                <div class="text-news" style="cursor: pointer;">
+                  <h2>Sáu người Việt ở Thổ Nhĩ Kì bị ảnh hưởng bởi trận động đất</h2>
+                  <div class="text-news-detail">
+                    <p><em>Cộng đồng người Việt tại Thổ Nhĩ Kì đã chung tay quyên góp nhu yếu phẩm </em></p>
+                    <span class="time"><em>17:30 - 21/02/2023</em></span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="organization-section">
+        <div class="body-section-wrap">
+          <div class="section-heading">
+            <h3>HIỆP HỘI</h3>
+          </div>
+          <div class="organization-container">
+            <div class="organization-wrap"><img src="./Assets/organization/Org1.png"></div>
+            <div class="organization-wrap"><img src="./Assets/organization/Org2.png"></div>
+            <div class="organization-wrap"><img src="./Assets/organization/Org3.png"></div>
+            <div class="organization-wrap"><img src="./Assets/organization/Org4.png"></div>
+            <div class="organization-wrap"><img src="./Assets/organization/Org5.png"></div>
+            <div class="organization-wrap"><img src="./Assets/organization/Org6.png"></div>
+            <div class="organization-wrap"><img src="./Assets/organization/Org7.png"></div>
+            <div class="organization-wrap"><img src="./Assets/organization/Org8.png"></div>
+            <div class="organization-wrap"><img src="./Assets/organization/Org9.png"></div>
+            <div class="organization-wrap"><img src="./Assets/organization/Org10.png"></div>
+            <div class="organization-wrap"><img src="./Assets/organization/Org11.png"></div>
+            <div class="organization-wrap"><img src="./Assets/organization/Org12.png" </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-wrap">
+        <div class="left-footer-wrap">
+          <div class="left-footer-content">
+            <h2>VIET SEARCH</h2>
+            <p>“Bạn là người Việt, bạn muốn kết nối”. Hãy đến với VietSearch để được kết nối với cộng đồng quốc tế</p>
+            <div class="social-media-wrap">
+              <a href="https://www.facebook.com/vietsearch.org/">
+                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.138184" y="0.857178" width="40" height="39.7456" rx="15" fill="white" />
+                  <path
+                    d="M24.4677 21.8034L24.9841 18.4935H21.7535V16.3466C21.7535 15.4411 22.2049 14.5575 23.6518 14.5575H25.1206V11.7396C25.1206 11.7396 23.7877 11.516 22.5132 11.516C19.8525 11.516 18.1134 13.1011 18.1134 15.9709V18.4935H15.1558V21.8034H18.1134V29.8048C19.3194 29.9903 20.5475 29.9903 21.7535 29.8048V21.8034H24.4677Z"
+                    fill="#25AAE1" />
+                </svg>
+              </a>
+              <a href="https://twitter.com/elonmusk">
+                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect y="0.855469" width="40" height="39.7456" rx="15" fill="white" />
+                  <path
+                    d="M15.347 30.697C24.8116 30.697 29.9883 23.0259 29.9883 16.3735C29.9883 16.1557 29.9883 15.9388 29.9733 15.7228C30.9804 15.0102 31.8497 14.1278 32.5406 13.117C31.6015 13.5244 30.6052 13.7913 29.585 13.9091C30.6593 13.28 31.4633 12.2905 31.8473 11.1247C30.8373 11.7111 29.7322 12.1244 28.5798 12.3466C27.8039 11.5395 26.7778 11.0051 25.6602 10.826C24.5426 10.647 23.3958 10.8332 22.3973 11.356C21.3988 11.8788 20.6043 12.7089 20.1367 13.7179C19.669 14.727 19.5544 15.8587 19.8104 16.9379C17.7646 16.8375 15.7632 16.3174 13.9361 15.4112C12.109 14.5051 10.4972 13.2333 9.20512 11.6782C8.54708 12.7865 8.34554 14.0984 8.64152 15.3469C8.93751 16.5954 9.70877 17.6866 10.7983 18.3983C9.97932 18.3748 9.17821 18.1587 8.46272 17.7682V17.832C8.46304 18.9943 8.87431 20.1207 9.62676 21.0201C10.3792 21.9195 11.4265 22.5367 12.5911 22.7668C11.8335 22.969 11.0386 22.9985 10.2676 22.8532C10.5965 23.8534 11.2367 24.728 12.0987 25.3548C12.9606 25.9816 14.0013 26.3293 15.0751 26.3492C14.0082 27.1696 12.7864 27.7762 11.4796 28.1342C10.1729 28.4922 8.80676 28.5947 7.45947 28.4358C9.81274 29.9131 12.5509 30.6967 15.347 30.6931"
+                    fill="#25AAE1" />
+                </svg>
+              </a>
+
+              <a href="https://www.instagram.com/instagram/">
+                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.218262" y="0.857056" width="40" height="39.7456" rx="15" fill="white" />
+                  <g clip-path="url(#clip0_148_561)">
+                    <path
+                      d="M20.2185 14.1496C22.3766 14.1496 22.6321 14.159 23.4808 14.1966C24.2696 14.2311 24.6955 14.3628 24.9795 14.4725C25.3549 14.6167 25.6263 14.7922 25.9071 15.0713C26.191 15.3534 26.3646 15.6199 26.5097 15.9929C26.6201 16.2751 26.7526 16.7014 26.7873 17.4821C26.8252 18.3285 26.8347 18.5824 26.8347 20.7236C26.8347 22.868 26.8252 23.1219 26.7873 23.9652C26.7526 24.7489 26.6201 25.1722 26.5097 25.4543C26.3646 25.8274 26.1879 26.097 25.9071 26.376C25.6231 26.6582 25.3549 26.8306 24.9795 26.9748C24.6955 27.0845 24.2665 27.2162 23.4808 27.2507C22.629 27.2883 22.3734 27.2977 20.2185 27.2977C18.0605 27.2977 17.8049 27.2883 16.9562 27.2507C16.1674 27.2162 15.7415 27.0845 15.4576 26.9748C15.0821 26.8306 14.8108 26.655 14.53 26.376C14.246 26.0939 14.0725 25.8274 13.9274 25.4543C13.8169 25.1722 13.6844 24.7458 13.6497 23.9652C13.6119 23.1188 13.6024 22.8648 13.6024 20.7236C13.6024 18.5793 13.6119 18.3254 13.6497 17.4821C13.6844 16.6983 13.8169 16.2751 13.9274 15.9929C14.0725 15.6199 14.2492 15.3503 14.53 15.0713C14.8139 14.7891 15.0821 14.6167 15.4576 14.4725C15.7415 14.3628 16.1706 14.2311 16.9562 14.1966C17.8049 14.159 18.0605 14.1496 20.2185 14.1496ZM20.2185 12.7043C18.0258 12.7043 17.7513 12.7138 16.8899 12.7514C16.0318 12.789 15.4418 12.9269 14.9307 13.1244C14.3975 13.3313 13.9463 13.6041 13.4983 14.0524C13.0471 14.4976 12.7726 14.9459 12.5644 15.4725C12.3656 15.9835 12.2268 16.5666 12.1889 17.4194C12.1511 18.2783 12.1416 18.5511 12.1416 20.7299C12.1416 22.9087 12.1511 23.1815 12.1889 24.0373C12.2268 24.89 12.3656 25.4763 12.5644 25.9841C12.7726 26.5139 13.0471 26.9622 13.4983 27.4074C13.9463 27.8526 14.3975 28.1285 14.9275 28.3322C15.4418 28.5297 16.0286 28.6677 16.8868 28.7053C17.7481 28.7429 18.0226 28.7523 20.2154 28.7523C22.4081 28.7523 22.6826 28.7429 23.5439 28.7053C24.4021 28.6677 24.9921 28.5297 25.5032 28.3322C26.0333 28.1285 26.4844 27.8526 26.9325 27.4074C27.3805 26.9622 27.6581 26.5139 27.8632 25.9873C28.062 25.4763 28.2008 24.8932 28.2387 24.0404C28.2765 23.1846 28.286 22.9118 28.286 20.733C28.286 18.5542 28.2765 18.2815 28.2387 17.4256C28.2008 16.5729 28.062 15.9867 27.8632 15.4788C27.6644 14.9459 27.3899 14.4976 26.9388 14.0524C26.4908 13.6072 26.0396 13.3313 25.5095 13.1276C24.9953 12.9301 24.4084 12.7921 23.5503 12.7545C22.6858 12.7138 22.4113 12.7043 20.2185 12.7043Z"
+                      fill="#25AAE1" />
+                    <path
+                      d="M20.2187 16.6074C17.9281 16.6074 16.0698 18.4539 16.0698 20.7299C16.0698 23.0059 17.9281 24.8524 20.2187 24.8524C22.5093 24.8524 24.3676 23.0059 24.3676 20.7299C24.3676 18.4539 22.5093 16.6074 20.2187 16.6074ZM20.2187 23.4041C18.7327 23.4041 17.5275 22.2065 17.5275 20.7299C17.5275 19.2533 18.7327 18.0558 20.2187 18.0558C21.7047 18.0558 22.91 19.2533 22.91 20.7299C22.91 22.2065 21.7047 23.4041 20.2187 23.4041Z"
+                      fill="#25AAE1" />
+                    <path
+                      d="M25.5002 16.4444C25.5002 16.9773 25.0648 17.4068 24.5316 17.4068C23.9952 17.4068 23.563 16.9742 23.563 16.4444C23.563 15.9114 23.9984 15.4819 24.5316 15.4819C25.0648 15.4819 25.5002 15.9146 25.5002 16.4444Z"
+                      fill="#25AAE1" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_148_561">
+                      <rect width="16.1538" height="16.0511" fill="white" transform="translate(12.1416 12.7043)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/company/vietsearch"><svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.138184" y="0.855469" width="40" height="39.7456" rx="15" fill="white" />
+                <path
+                  d="M16.1877 17.3457V26.8555H13.6476V17.3457H16.1877ZM13.4894 14.8672C13.4894 14.498 13.6183 14.1934 13.8762 13.9531C14.134 13.7129 14.4797 13.5928 14.9133 13.5928C15.341 13.5928 15.6838 13.7129 15.9416 13.9531C16.2053 14.1934 16.3371 14.498 16.3371 14.8672C16.3371 15.2363 16.2053 15.541 15.9416 15.7812C15.6838 16.0215 15.341 16.1416 14.9133 16.1416C14.4797 16.1416 14.134 16.0215 13.8762 15.7812C13.6183 15.541 13.4894 15.2363 13.4894 14.8672ZM21.118 19.376V26.8555H18.5867V17.3457H20.9598L21.118 19.376ZM20.7488 21.7666H20.0633C20.0633 21.0635 20.1541 20.4307 20.3358 19.8682C20.5174 19.2998 20.7723 18.8164 21.1004 18.418C21.4285 18.0137 21.8182 17.7061 22.2694 17.4951C22.7264 17.2783 23.2362 17.1699 23.7987 17.1699C24.244 17.1699 24.6512 17.2344 25.0203 17.3633C25.3895 17.4922 25.7059 17.6973 25.9696 17.9785C26.2391 18.2598 26.4442 18.6318 26.5848 19.0947C26.7313 19.5576 26.8045 20.123 26.8045 20.791V26.8555H24.2557V20.7822C24.2557 20.3604 24.1971 20.0322 24.0799 19.7979C23.9627 19.5635 23.7899 19.3994 23.5613 19.3057C23.3387 19.2061 23.0633 19.1562 22.7352 19.1562C22.3953 19.1562 22.0994 19.2236 21.8475 19.3584C21.6014 19.4932 21.3963 19.6807 21.2322 19.9209C21.074 20.1553 20.9539 20.4307 20.8719 20.7471C20.7899 21.0635 20.7488 21.4033 20.7488 21.7666Z"
+                  fill="#25AAE1" />
+                </svg>
+                
+              </a>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="right-footer-wrap">
+          <div class="right-footer-content">
+            <div class="right-col" id="func">
+              <h4> Tính Năng</h4>
+              <a href="#">Tìm chuyên gia</a>
+              <a href="#">Tìm dịch vụ</a>
+              <a href="#">Tìm sự kiện</a>
+            </div>
+            <div class="right-col" id="explore">
+              <h4>Khám Phá</h4>
+              <a href="#">Chuyên gia công nghệ</a>
+              <a href="#">Dịch vụ luận</a>
+              <a href="#">Bản đồ Việt</a>
+              <a href="#">Tuyển dụng</a>
+            </div>
+            <div class="right-col" id="info">
+              <h4>Thông Tin</h4>
+              <a href="#">Điều khoản</a>
+              <a href="#">Bảo mật</a>
+              <a href="#">Về chúng tôi</a>
+              <a href="#">Liên hệ</a>
+              <a href="#">Nhà tài trợ</a>
+              <a href="#">Team VietSearch</a>
+            </div>
+            <div class="right-col" id="download">
+              <h4>Tải ứng dụng</h4>
+              <a href="https://apps.apple.com/us/app/vietsearch/id1482035858"><img
+                  src="./Assets/download/aotomation-app.png.png"></a>
+              <a href="https://play.google.com/store/apps"><img src="./Assets/download/automation-ggplay.png.png"></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <h2>@ 2019 - 2023 BẢN QUYỀN THUỘC VỀ VIỆT SEARCH</h2>
+    </div>
+
+    <script type="text/javascript" src="./homepage.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+  apiKey: "AIzaSyCO8HLy1JHL4wvkguQQtBE4NBZynxQ0pDs",
+  authDomain: "vietsearch-team19.firebaseapp.com",
+  databaseURL:
+  "https://vietsearch-team19-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "vietsearch-team19",
+  storageBucket: "vietsearch-team19.appspot.com",
+  messagingSenderId: "31988883890",
+  appId: "1:31988883890:web:3aba4cb5390683831c84ab",
+  measurementId: "G-H2CYHFR2PK"
+};
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+</body>
+
+</html>
