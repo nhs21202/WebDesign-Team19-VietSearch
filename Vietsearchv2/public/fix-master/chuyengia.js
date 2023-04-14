@@ -93,6 +93,13 @@ menuBtn.addEventListener('click', () => {
   menuBtn.style.display = "none";
 })
 
+function openMobileNav(){
+  document.querySelector(".mobile-nav-section").style.display="flex";
+}
+function closeMobileNav(){
+  document.querySelector(".mobile-nav-section").style.display="none";
+  document.querySelector(".navbar").style.display="flex";
+}
 
 // close nav menu 
 const closeNav = () => {

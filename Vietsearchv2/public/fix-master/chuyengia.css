@@ -147,7 +147,6 @@ body {
   
   a {
     color:#25AAE1;
-    font-weight: bold;
   }
   
   img {
@@ -498,6 +497,84 @@ input::placeholder {
 }
 .navbar-scrolled svg{
     color:black;
+}
+.mobile-nav-section{
+    height: 100%;
+    width: 60%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    display:none;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+.mobile-nav-section a:visited{
+    color: black;
+}
+.mobile-nav-section img{
+    width:70%;
+    
+}
+.mobile-nav-section ul{
+    margin:0px;
+    padding:0px;
+}
+.closenav-btn svg{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    margin-left: 50px;
+    color:black;
+}
+.mobile-nav-item-list{
+    flex-basis:45%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin:0px;
+    padding:0px;
+}
+.mobile-nav-item-list a{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 8px 8px 32px;
+    display: block;
+}
+
+.mobile-nav-item-list a:hover{
+    background-color: #25aae1;
+    color:white;    
+    transition: 0.2s;
+
+}
+.mobile-language{
+    padding: 8px 8px 8px 32px;
+}
+.mobile-login-button button {
+    color: white;
+    background-color: #25aae1;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-left:20px;
+}
+
+.mobile-login-button span {
+    font-size: 0.9rem;
+}
+
+.mobile-login-button button:active {
+    transition-duration: 0.2s;
+    background-color: #0e7fa3;
 }
 
 /*BODY CSS*/
@@ -1441,7 +1518,7 @@ input::placeholder {
     width: 100%;
     padding: 1rem;
     background: var(--color-white);
-    color: var(--color-white);
+
   }
   
   .contact__form .btn {
